@@ -1,5 +1,6 @@
 #Puzzle
 
+<!-- Hide the DOCTYPE declaration -->
 <!DOCTYPE html>
 <html>
 <head>
