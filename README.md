@@ -1,7 +1,7 @@
 #Puzzle
 
 <!-- Hide the DOCTYPE declaration -->
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html>
 <head>
 	<title>Secret Websites</title>
