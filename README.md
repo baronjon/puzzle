@@ -1,6 +1,6 @@
 #Puzzle
 
-
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Secret Websites</title>
