@@ -1,89 +1,151 @@
-# fruity
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Word Guessing Game</title>
+	<title>Secret Websites</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 	<style>
 		body {
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
-			text-align: center;
+			background-color: #f7f7f7;
+			font-family: 'Montserrat', sans-serif;
+			padding: 50px;
 		}
+
 		h1 {
-			color: #444444;
+			margin-bottom: 50px;
 		}
-		#guesses {
-			margin: 20px auto;
-			display: flex;
-			justify-content: center;
+
+		form {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 30px;
+			margin-bottom: 50px;
 		}
-		#guesses input {
-			width: 30px;
-			height: 30px;
-			font-size: 18px;
-			text-align: center;
-			margin: 0 10px;
-			border: none;
-			border-radius: 5px;
-			background-color: #e2e2e2;
-		}
-		button {
+
+		input[type=text] {
+			padding: 10px;
 			font-size: 16px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			outline: none;
+			width: 70%;
+			margin-right: 10px;
+		}
+
+		input[type=submit] {
 			padding: 10px 20px;
-			background-color: #3f51b5;
-			color: #ffffff;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: #fff;
 			border: none;
 			border-radius: 5px;
 			cursor: pointer;
-			margin-top: 20px;
+			transition: all 0.3s ease;
 		}
-		#result {
-			margin-top: 20px;
+
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+
+		label {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.icon {
 			font-size: 24px;
-			font-weight: bold;
-			color: #444444;
+			margin-right: 10px;
 		}
+
+        #form4 {
+            display: none;
+        }
 	</style>
 </head>
 <body>
-	<h1>Word Guessing Game</h1>
-	<p>Guess the secret five-letter word:</p>
-	<div id="guesses">
-		<input type="text" maxlength="1" />
-		<input type="text" maxlength="1" />
-		<input type="text" maxlength="1" />
-		<input type="text" maxlength="1" />
-		<input type="text" maxlength="1" />
-		
-		
-	</div>
-	<button onclick="checkGuess()">Check Guess</button>
-	<div id="result"></div>
+	<h1>Revival</h1>
+	<form id="form1">
+		<label for="secret1">Secret word 1:</label>
+		<input type="text" id="secret1" name="secret1">
+		<input type="submit" value="Submit">
+	</form>
+
+	<form id="form2">
+		<label for="secret2">Secret word 2:</label>
+		<input type="text" id="secret2" name="secret2">
+		<input type="submit" value="Submit">
+	</form>
+
+	<form id="form3">
+		<label for="secret3">Secret Word 3:</label>
+		<input type="text" id="secret3" name="secret3">
+		<input type="submit" value="Submit">
+	</form>
+	
+    <form id="form4">
+		<label for="secret4">Enter Final Word To Reveal Birthday Gift:</label>
+		<input type="text" id="secret4" name="secret4">
+		<input type="submit" value="Submit">
+	</form>
 
 	<script>
-		// Define the secret word
-		const secretWord = "apple";
+		const form1 = document.getElementById("form1");
+		const secretInput1 = document.getElementById("secret1");
 
-		// Function to check the guess
-		function checkGuess() {
-			// Get the guess from the input fields
-			const guess1 = document.querySelector("#guesses input:nth-of-type(1)").value.toLowerCase();
-			const guess2 = document.querySelector("#guesses input:nth-of-type(2)").value.toLowerCase();
-			const guess3 = document.querySelector("#guesses input:nth-of-type(3)").value.toLowerCase();
-			const guess4 = document.querySelector("#guesses input:nth-of-type(4)").value.toLowerCase();
-			const guess5 = document.querySelector("#guesses input:nth-of-type(5)").value.toLowerCase();
-			const guess = guess1 + guess2 + guess3 + guess4 + guess5;
+		const form2 = document.getElementById("form2");
+		const secretInput2 = document.getElementById("secret2");
 
-			// Check if the guess is correct
-			if (guess === secretWord) {
-				document.querySelector("#result").innerHTML = "Congratulations! You guessed the word!";
-				document.querySelector("#result").style.color = "#008000";
+		const form3 = document.getElementById("form3");
+		const secretInput3 = document.getElementById("secret3");
+		
+        const form4 = document.getElementById("form4");
+		const secretInput4 = document.getElementById("secret4");
+
+		form1.addEventListener("submit", (event) => {
+			event.preventDefault();
+			const secret1 = secretInput1.value.trim().toLowerCase();
+			if (secret1 === "art") {
+                window.open("https://mywordle.strivemath.com/?word=hwkhcepiih");
 			} else {
-				document.querySelector("#result").innerHTML = "Sorry, that's not the word.";
-				document.querySelector("#result").style.color = "#ff0000";
+				alert("Incorrect secret word, please try again.");
 			}
-		}
+		});
+
+		form2.addEventListener("submit", (event) => {
+			event.preventDefault();
+			const secret2 = secretInput2.value.trim().toLowerCase();
+			if (secret2 === "literature") {
+				window.open("https://crosswordlabs.com/embed/clue-2-162");
+			} else {
+				alert("Incorrect secret word, please try again.");
+			}
+		});
+
+		form3.addEventListener("submit", (event) => {
+			event.preventDefault();
+			const secret3 = secretInput3.value.trim().toLowerCase();
+			if (secret3 === "music") {
+				window.open("https://www.onelook.com/thesaurus/");
+                form4.style.display = "block";
+                form4.style.backgroundColor = "gold";
+                
+                
+			} else {
+				alert("Incorrect secret word, please try again.");
+			}
+		});
+		
+        form4.addEventListener("submit", (event) => {
+			event.preventDefault();
+			const secret4 = secretInput4.value.trim().toLowerCase();
+			if (secret4 === "renaissance") {
+				window.open("https://beyonce.com");
+			} else {
+				alert("Incorrect secret word, please try again.");
+			}
+		});
 	</script>
 </body>
 </html>
